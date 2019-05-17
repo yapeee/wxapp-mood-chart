@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/mood-charts/mood-charts",
+    "pages/mood-list/mood-list",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#ACADBE",
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#29bf9b",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/mood-charts/mood-charts",
+        "text": "图表"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      }
+    ]
+  }
+}

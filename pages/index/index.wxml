@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <form bindsubmit='formSubmit'>
+    <!-- input -->
+    <view class="cu-form-group margin-top">
+		  <textarea maxlength="-1" placeholder="写一下你哪里（不）爽呀？" name="content"></textarea>
+	  </view>
+    <!-- add -->
+    <view class="cu-bar">
+      <view class="action">
+        <text class="cuIcon-title text-green"></text>
+        <text>当前爽度</text>
+      </view>
+    </view>
+    <view class="box">
+      <view class="cu-bar btn-group">
+        <view class="text-sl">
+          <text>{{comfortCount}}</text>
+        </view>
+      </view>
+      <view class="cu-bar btn-group">
+        <button class="cu-btn bg-grey shadow-blur round lg" data-type='add' bindtap='changeCount'>+</button>
+        <button class="cu-btn bg-grey shadow-blur round lg" data-type='sub' bindtap='changeCount'>-</button>
+      </view>
+    </view>
+    <!-- button -->
+    <view class="padding flex flex-direction">
+      <button class="cu-btn bg-grey lg" formType='submit'>提交</button>
+    </view>
+  </form>
+</view>

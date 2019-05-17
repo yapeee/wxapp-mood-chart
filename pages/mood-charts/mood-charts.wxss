@@ -1,0 +1,8 @@
+/* pages/mood-charts/mood-charts.wxss */
+.container {
+  height: 600rpx;
+}
+ec-canvas {
+  width: 800rpx;
+  height: 600rpx;
+}

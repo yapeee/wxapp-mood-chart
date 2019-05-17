@@ -1,0 +1,6 @@
+<!--pages/mood-charts/mood-charts.wxml-->
+<view>
+  <view class="container">
+    <ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>
