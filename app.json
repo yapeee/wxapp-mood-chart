@@ -1,15 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/mood-charts/mood-charts",
     "pages/mood-list/mood-list",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#ACADBE",
@@ -18,13 +18,18 @@
     "borderStyle": "white",
     "list": [
       {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
         "pagePath": "pages/mood-charts/mood-charts",
         "text": "图表"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "首页"
+        "pagePath": "pages/mood-list/mood-list",
+        "text": "列表"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

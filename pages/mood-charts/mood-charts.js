@@ -24,12 +24,13 @@ Page({
   	 * 此处的操作：
   	 * 获取数据json
   	 */
-    if (k % 2) {
-      dataList = [1, 2, 3, 4, 5, 6];
-    } else {
-      dataList = [7, 6, 9, 2, 5, 6];
-    }
-    k++;
+    dataList = getApp().cache.getData('comfortInfo')
+    // if (k % 2) {
+    //   dataList = [1, 2, 3, 4, 5, 6];
+    // } else {
+    //   dataList = [7, 6, 9, 2, 5, 6];
+    // }
+    // k++;
     //如果是第一次绘制
     if (!Chart) {
       this.init_echarts(); //初始化图表
@@ -59,14 +60,16 @@ Page({
     // 指定图表的配置项和数据
     var option = {
       xAxis: {
-        type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        type: 'time'
       },
       yAxis: {
         type: 'value'
       },
       series: [{
-        data: dataList,
+        data: dataList.map(function (item) {
+          let array = [item.time, item.count];
+          return array;
+        }),
         type: 'line'
       }]
     }

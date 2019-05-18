@@ -1,2 +1,23 @@
 <!--pages/mood-list/mood-list.wxml-->
-<text>pages/mood-list/mood-list.wxml</text>
+<view>
+  <view class="cu-bar">
+      <view class="action">
+        <text class="cuIcon-title text-green"></text>
+        <text>列表详情</text>
+      </view>
+    </view>
+  <!-- list -->
+  <view class="cu-list menu sm-border card-menu margin-top">
+    <view class="cu-item" wx:for="{{comfortList}}" wx:key="index">
+      <view class="content padding-tb-sm">
+        <view>
+          <text class="cuIcon-clothesfill text-blue margin-right-xs"></text>{{item.time}}</view>
+        <view class="text-gray text-sm">
+          <text class="cuIcon-infofill margin-right-xs"></text> {{item.content}}</view>
+      </view>
+      <view class="action">
+        <text class="text-grey text-sm">爽度：{{item.count}}</text>
+      </view>
+    </view>
+  </view>
+</view>
